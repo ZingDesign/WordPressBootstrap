@@ -1,0 +1,55 @@
+/*!
+Theme Name: Zing Design WordPress Bootstrap
+Theme URI: http://zingdesign.com/downloads/themes/wpbs
+Author: Zing Design
+Author URI: http://zingdesign.com
+Description: This is a boilerplate theme for developers to use to build WordPress themes using Bootstrap
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: bootstrap, boilerplate, centred, basic, sidebar
+Text Domain: zdwpbs
+
+*/
+
+// Uncomment resources as needed
+
+// Compass requirements
+
+// All
+//@import "compass";
+
+// Popular
+//@import "compass/css3/transition";
+//@import "compass/css3/box-shadow";
+//@import "compass/css3/border-radius";
+//@import "compass/css3/transform";
+//@import "compass/css3/opacity";
+//@import "compass/css3/box-sizing";
+//@import "compass/utilities/general/clearfix";
+//@import "compass/typography/text/replacement";
+
+// Use Bootstrap
+@import '../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss';
+
+// OR Use Foundation
+
+//@import '../foundation/bower_components/foundation/scss/normalize.scss';
+//@import '../foundation/bower_components/foundation/scss/foundation.scss';
+
+// Use WordPress' Twenty Fourteen theme
+//@import 'twentyfourteen';
+
+@import 'base';
+
+@import 'wordpress';
+
+@import 'typography';
+@import 'navigation';
+@import 'header';
+@import 'content';
+@import 'sidebar';
+@import 'footer';
+
+@import 'print';
+@import 'ie';

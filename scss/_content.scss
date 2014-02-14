@@ -1,0 +1,21 @@
+/*! Custom content styles */
+
+#main {
+//  @extend .container;
+//  @include container-fixed();
+//  @include make-row();
+}
+
+// grid
+
+#main-content {
+  @include make-sm-column(7);
+  @include make-md-column(8);
+  @include make-lg-column(9);
+}
+
+#secondary {
+  @include make-sm-column(5);
+  @include make-md-column(4);
+  @include make-lg-column(3);
+}
