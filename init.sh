@@ -5,9 +5,9 @@ npm install -g bower grunt-cli
 echo 'Bower and Grunt CLI installed successfully'
 
 # Install Foundation
-gem install foundation
-foundation new foundation
-echo 'Foundation installed successfully'
+# gem install foundation
+# foundation new foundation
+# echo 'Foundation installed successfully'
 
 # Install Sass Bootstrap
 bower install git://github.com/twbs/bootstrap-sass.git --allow-root

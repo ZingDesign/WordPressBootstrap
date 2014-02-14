@@ -10,9 +10,15 @@ http://nodejs.org/
 http://compass-style.org/install/
 
 **Initialise**
-    $ cd ~/path/to/zingdesign-wordpress-bootstrap
-    $ [sudo] bash init.sh
+
+```
+$ cd ~/path/to/zingdesign-wordpress-bootstrap
+$ [sudo] bash init.sh
+```
 
 **Update**
-    $ cd ~/path/to/zingdesign-wordpress-bootstrap
-    $ [sudo] bash update.sh
+
+```
+$ cd ~/path/to/zingdesign-wordpress-bootstrap
+$ [sudo] bash update.sh
+```
