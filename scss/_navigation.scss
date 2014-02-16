@@ -1,1 +1,9 @@
 /*! Custom navigation styles */
+
+.nav-menu {
+  ul {
+    @extend .nav !optional;
+    @extend .navbar-nav !optional;
+    @extend .navbar-right !optional;
+  }
+}

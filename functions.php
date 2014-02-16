@@ -525,9 +525,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
 }
-
-//function zdwpbs_wp_nav_menu_args( $args = '' ) {
-//    $args['container'] = false;
-//    return $args;
-//}
-//add_filter( 'wp_nav_menu_args', 'zdwpbs_wp_nav_menu_args' );

@@ -33,12 +33,10 @@
                 <!--            </form>-->
 
                 <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'zdwpbs' ); ?></a>
-                <?php wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'menu_class' => 'nav navbar navbar-right',
-                    'container' => '',
-                    'container_class' => false
-                ) ); ?>
+                <?php
+                wp_nav_menu( array( 'theme_location' => 'primary',
+                                    'menu_class' => 'nav-menu' ) );
+                ?>
             </div><!-- /.navbar-collapse -->
 <!--            </div>-->
     <!-- /.container-fluid -->
