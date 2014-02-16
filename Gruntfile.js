@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 //                src: ['js/bootstrap/*.js']
 //            },
             custom: {
-                src: ['js/custom.js']
+                src: 'js/custom.js'
             }
         },
 
