@@ -4395,12 +4395,12 @@ input[type="button"].btn-block {
 
 @media (min-width: 768px) {
   /* line 203, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_dropdowns.scss */
-  .navbar-right .dropdown-menu {
+  .navbar-right .dropdown-menu, .nav-menu ul .dropdown-menu {
     right: 0;
     left: auto;
   }
   /* line 208, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_dropdowns.scss */
-  .navbar-right .dropdown-menu-left {
+  .navbar-right .dropdown-menu-left, .nav-menu ul .dropdown-menu-left {
     left: 0;
     right: auto;
   }
@@ -4786,61 +4786,61 @@ input[type="button"].btn-block {
 }
 
 /* line 9, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav {
+.nav, .nav-menu ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 /* line 21, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.nav:before, .nav:after {
+.nav:before, .nav-menu ul:before, .nav:after, .nav-menu ul:after {
   content: " ";
   display: table;
 }
 /* line 25, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.nav:after {
+.nav:after, .nav-menu ul:after {
   clear: both;
 }
 /* line 15, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li {
+.nav > li, .nav-menu ul > li {
   position: relative;
   display: block;
 }
 /* line 19, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a {
+.nav > li > a, .nav-menu ul > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
 }
 /* line 24, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover, .nav-menu ul > li > a:hover, .nav > li > a:focus, .nav-menu ul > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
 /* line 31, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li.disabled > a {
+.nav > li.disabled > a, .nav-menu ul > li.disabled > a {
   color: #999999;
 }
 /* line 35, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+.nav > li.disabled > a:hover, .nav-menu ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .nav-menu ul > li.disabled > a:focus {
   color: #999999;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
 }
 /* line 48, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+.nav .open > a, .nav-menu ul .open > a, .nav .open > a:hover, .nav-menu ul .open > a:hover, .nav .open > a:focus, .nav-menu ul .open > a:focus {
   background-color: #eeeeee;
   border-color: #428bca;
 }
 /* line 59, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav .nav-divider {
+.nav .nav-divider, .nav-menu ul .nav-divider {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 /* line 66, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a > img {
+.nav > li > a > img, .nav-menu ul > li > a > img {
   max-width: none;
 }
 
@@ -5182,18 +5182,18 @@ input[type="button"].btn-block {
 }
 
 /* line 218, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-nav {
+.navbar-nav, .nav-menu ul {
   margin: 7.5px -15px;
 }
 /* line 221, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-nav > li > a {
+.navbar-nav > li > a, .nav-menu ul > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
 }
 @media (max-width: 767px) {
   /* line 229, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu {
+  .navbar-nav .open .dropdown-menu, .nav-menu ul .open .dropdown-menu {
     position: static;
     float: none;
     width: auto;
@@ -5203,36 +5203,37 @@ input[type="button"].btn-block {
     box-shadow: none;
   }
   /* line 238, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a,
-  .navbar-nav .open .dropdown-menu .dropdown-header {
+  .navbar-nav .open .dropdown-menu > li > a, .nav-menu ul .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header,
+  .nav-menu ul .open .dropdown-menu .dropdown-header {
     padding: 5px 15px 5px 25px;
   }
   /* line 241, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-nav .open .dropdown-menu > li > a, .nav-menu ul .open .dropdown-menu > li > a {
     line-height: 20px;
   }
   /* line 244, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-nav .open .dropdown-menu > li > a:hover, .nav-menu ul .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus, .nav-menu ul .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
 }
 @media (min-width: 768px) {
   /* line 218, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav {
+  .navbar-nav, .nav-menu ul {
     float: left;
     margin: 0;
   }
   /* line 256, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav > li {
+  .navbar-nav > li, .nav-menu ul > li {
     float: left;
   }
   /* line 258, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav > li > a {
+  .navbar-nav > li > a, .nav-menu ul > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
   }
   /* line 264, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav.navbar-right:last-child {
+  .navbar-nav.navbar-right:last-child, .nav-menu ul:last-child {
     margin-right: -15px;
   }
 }
@@ -5244,7 +5245,7 @@ input[type="button"].btn-block {
   }
 
   /* line 281, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-right {
+  .navbar-right, .nav-menu ul {
     float: right !important;
   }
 }
@@ -5279,20 +5280,20 @@ input[type="button"].btn-block {
     box-shadow: none;
   }
   /* line 324, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-form.navbar-right:last-child {
+  .navbar-form.navbar-right:last-child, .nav-menu ul.navbar-form:last-child {
     margin-right: -15px;
   }
 }
 
 /* line 334, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-nav > li > .dropdown-menu {
+.navbar-nav > li > .dropdown-menu, .nav-menu ul > li > .dropdown-menu {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 339, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, .navbar-fixed-bottom .nav-menu ul > li > .dropdown-menu, .nav-menu .navbar-fixed-bottom ul > li > .dropdown-menu {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -5326,7 +5327,7 @@ input[type="button"].btn-block {
     margin-right: 15px;
   }
   /* line 373, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-text.navbar-right:last-child {
+  .navbar-text.navbar-right:last-child, .nav-menu ul.navbar-text:last-child {
     margin-right: 0;
   }
 }
@@ -5350,21 +5351,21 @@ input[type="button"].btn-block {
   color: #777777;
 }
 /* line 401, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, .navbar-default .nav-menu ul > li > a, .nav-menu .navbar-default ul > li > a {
   color: #777777;
 }
 /* line 405, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .nav-menu ul > li > a:hover, .nav-menu .navbar-default ul > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .nav-menu ul > li > a:focus, .nav-menu .navbar-default ul > li > a:focus {
   color: #333333;
   background-color: transparent;
 }
 /* line 413, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a, .navbar-default .nav-menu ul > .active > a, .nav-menu .navbar-default ul > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .nav-menu ul > .active > a:hover, .nav-menu .navbar-default ul > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .nav-menu ul > .active > a:focus, .nav-menu .navbar-default ul > .active > a:focus {
   color: #555555;
   background-color: #e7e7e7;
 }
 /* line 421, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+.navbar-default .navbar-nav > .disabled > a, .navbar-default .nav-menu ul > .disabled > a, .nav-menu .navbar-default ul > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .nav-menu ul > .disabled > a:hover, .nav-menu .navbar-default ul > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus, .navbar-default .nav-menu ul > .disabled > a:focus, .nav-menu .navbar-default ul > .disabled > a:focus {
   color: #cccccc;
   background-color: transparent;
 }
@@ -5386,27 +5387,27 @@ input[type="button"].btn-block {
   border-color: #e7e7e7;
 }
 /* line 450, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .nav-menu ul > .open > a, .nav-menu .navbar-default ul > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .nav-menu ul > .open > a:hover, .nav-menu .navbar-default ul > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .nav-menu ul > .open > a:focus, .nav-menu .navbar-default ul > .open > a:focus {
   background-color: #e7e7e7;
   color: #555555;
 }
 @media (max-width: 767px) {
   /* line 459, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .nav-menu ul .open .dropdown-menu > li > a, .nav-menu .navbar-default ul .open .dropdown-menu > li > a {
     color: #777777;
   }
   /* line 462, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .nav-menu ul .open .dropdown-menu > li > a:hover, .nav-menu .navbar-default ul .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .nav-menu ul .open .dropdown-menu > li > a:focus, .nav-menu .navbar-default ul .open .dropdown-menu > li > a:focus {
     color: #333333;
     background-color: transparent;
   }
   /* line 470, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .nav-menu ul .open .dropdown-menu > .active > a, .nav-menu .navbar-default ul .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .nav-menu ul .open .dropdown-menu > .active > a:hover, .nav-menu .navbar-default ul .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .nav-menu ul .open .dropdown-menu > .active > a:focus, .nav-menu .navbar-default ul .open .dropdown-menu > .active > a:focus {
     color: #555555;
     background-color: #e7e7e7;
   }
   /* line 478, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .nav-menu ul .open .dropdown-menu > .disabled > a, .nav-menu .navbar-default ul .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .nav-menu ul .open .dropdown-menu > .disabled > a:hover, .nav-menu .navbar-default ul .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-default .nav-menu ul .open .dropdown-menu > .disabled > a:focus, .nav-menu .navbar-default ul .open .dropdown-menu > .disabled > a:focus {
     color: #cccccc;
     background-color: transparent;
   }
@@ -5439,21 +5440,21 @@ input[type="button"].btn-block {
   color: #999999;
 }
 /* line 521, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .nav-menu ul > li > a, .nav-menu .navbar-inverse ul > li > a {
   color: #999999;
 }
 /* line 525, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .nav-menu ul > li > a:hover, .nav-menu .navbar-inverse ul > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .nav-menu ul > li > a:focus, .nav-menu .navbar-inverse ul > li > a:focus {
   color: white;
   background-color: transparent;
 }
 /* line 533, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .nav-menu ul > .active > a, .nav-menu .navbar-inverse ul > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .nav-menu ul > .active > a:hover, .nav-menu .navbar-inverse ul > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .nav-menu ul > .active > a:focus, .nav-menu .navbar-inverse ul > .active > a:focus {
   color: white;
   background-color: #090909;
 }
 /* line 541, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
+.navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .nav-menu ul > .disabled > a, .nav-menu .navbar-inverse ul > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .nav-menu ul > .disabled > a:hover, .nav-menu .navbar-inverse ul > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .navbar-inverse .nav-menu ul > .disabled > a:focus, .nav-menu .navbar-inverse ul > .disabled > a:focus {
   color: #444444;
   background-color: transparent;
 }
@@ -5475,35 +5476,35 @@ input[type="button"].btn-block {
   border-color: #101010;
 }
 /* line 570, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .nav-menu ul > .open > a, .nav-menu .navbar-inverse ul > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .nav-menu ul > .open > a:hover, .nav-menu .navbar-inverse ul > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .nav-menu ul > .open > a:focus, .nav-menu .navbar-inverse ul > .open > a:focus {
   background-color: #090909;
   color: white;
 }
 @media (max-width: 767px) {
   /* line 579, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse .nav-menu ul .open .dropdown-menu > .dropdown-header, .nav-menu .navbar-inverse ul .open .dropdown-menu > .dropdown-header {
     border-color: #090909;
   }
   /* line 582, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+  .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .navbar-inverse .nav-menu ul .open .dropdown-menu .divider, .nav-menu .navbar-inverse ul .open .dropdown-menu .divider {
     background-color: #090909;
   }
   /* line 585, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .nav-menu ul .open .dropdown-menu > li > a, .nav-menu .navbar-inverse ul .open .dropdown-menu > li > a {
     color: #999999;
   }
   /* line 588, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .nav-menu ul .open .dropdown-menu > li > a:hover, .nav-menu .navbar-inverse ul .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .nav-menu ul .open .dropdown-menu > li > a:focus, .nav-menu .navbar-inverse ul .open .dropdown-menu > li > a:focus {
     color: white;
     background-color: transparent;
   }
   /* line 596, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .nav-menu ul .open .dropdown-menu > .active > a, .nav-menu .navbar-inverse ul .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .nav-menu ul .open .dropdown-menu > .active > a:hover, .nav-menu .navbar-inverse ul .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .nav-menu ul .open .dropdown-menu > .active > a:focus, .nav-menu .navbar-inverse ul .open .dropdown-menu > .active > a:focus {
     color: white;
     background-color: #090909;
   }
   /* line 604, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .nav-menu ul .open .dropdown-menu > .disabled > a, .nav-menu .navbar-inverse ul .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .nav-menu ul .open .dropdown-menu > .disabled > a:hover, .nav-menu .navbar-inverse ul .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .nav-menu ul .open .dropdown-menu > .disabled > a:focus, .nav-menu .navbar-inverse ul .open .dropdown-menu > .disabled > a:focus {
     color: #444444;
     background-color: transparent;
   }
@@ -7607,18 +7608,18 @@ button.close {
     display: none !important;
   }
 }
-/* line 44, ../scss/_base.scss */
+/* line 39, ../scss/_base.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 62, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
 .mobile-friendly {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 67, ../scss/_base.scss */
+/* line 62, ../scss/_base.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -7626,7 +7627,7 @@ html {
   *text-indent: -9999px;
 }
 
-/* line 74, ../scss/_base.scss */
+/* line 69, ../scss/_base.scss */
 .ir:before {
   content: "";
   display: block;
@@ -7635,7 +7636,7 @@ html {
 }
 
 /* Flex Video */
-/* line 82, ../scss/_base.scss */
+/* line 77, ../scss/_base.scss */
 .flex-video {
   position: relative;
   padding-top: 1.5625em;
@@ -7644,15 +7645,15 @@ html {
   margin-bottom: 1em;
   overflow: hidden;
 }
-/* line 90, ../scss/_base.scss */
+/* line 85, ../scss/_base.scss */
 .flex-video.widescreen {
   padding-bottom: 57.25%;
 }
-/* line 94, ../scss/_base.scss */
+/* line 89, ../scss/_base.scss */
 .flex-video.vimeo {
   padding-top: 0;
 }
-/* line 98, ../scss/_base.scss */
+/* line 93, ../scss/_base.scss */
 .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
   position: absolute;
   top: 0;
@@ -7661,12 +7662,11 @@ html {
   height: 100%;
 }
 
-/* Primary Navigation */
 /**
  * 6.4 Entry Content
  * -----------------------------------------------------------------------------
  */
-/* line 35, ../scss/_wordpress.scss */
+/* line 8, ../scss/_wordpress.scss */
 .entry-content,
 .entry-summary,
 .page-content {
@@ -7677,7 +7677,7 @@ html {
   word-wrap: break-word;
 }
 
-/* line 45, ../scss/_wordpress.scss */
+/* line 18, ../scss/_wordpress.scss */
 .site-content .entry-content,
 .site-content .entry-summary,
 .page-content {
@@ -7685,12 +7685,12 @@ html {
   padding: 12px 10px 0;
 }
 
-/* line 50, ../scss/_wordpress.scss */
+/* line 23, ../scss/_wordpress.scss */
 .page .entry-content {
   padding-top: 0;
 }
 
-/* line 71, ../scss/_wordpress.scss */
+/* line 44, ../scss/_wordpress.scss */
 .entry-content h1:first-child,
 .entry-content h2:first-child,
 .entry-content h3:first-child,
@@ -7712,7 +7712,7 @@ html {
   margin-top: 0;
 }
 
-/* line 78, ../scss/_wordpress.scss */
+/* line 51, ../scss/_wordpress.scss */
 .entry-content a,
 .entry-summary a,
 .page-content a,
@@ -7720,7 +7720,7 @@ html {
   text-decoration: underline;
 }
 
-/* line 85, ../scss/_wordpress.scss */
+/* line 58, ../scss/_wordpress.scss */
 .entry-content a:hover,
 .entry-summary a:hover,
 .page-content a:hover,
@@ -7728,7 +7728,7 @@ html {
   text-decoration: none;
 }
 
-/* line 90, ../scss/_wordpress.scss */
+/* line 63, ../scss/_wordpress.scss */
 .entry-content table,
 .comment-content table {
   font-size: 14px;
@@ -7736,7 +7736,7 @@ html {
   margin-bottom: 24px;
 }
 
-/* line 97, ../scss/_wordpress.scss */
+/* line 70, ../scss/_wordpress.scss */
 .entry-content th,
 .comment-content th {
   font-weight: 700;
@@ -7744,13 +7744,13 @@ html {
   text-transform: uppercase;
 }
 
-/* line 104, ../scss/_wordpress.scss */
+/* line 77, ../scss/_wordpress.scss */
 .entry-content td,
 .comment-content td {
   padding: 8px;
 }
 
-/* line 108, ../scss/_wordpress.scss */
+/* line 81, ../scss/_wordpress.scss */
 .entry-content .edit-link {
   clear: both;
   display: block;
@@ -7760,25 +7760,25 @@ html {
   text-transform: uppercase;
 }
 
-/* line 117, ../scss/_wordpress.scss */
+/* line 90, ../scss/_wordpress.scss */
 .entry-content .edit-link a {
   color: #767676;
   text-decoration: none;
 }
 
-/* line 122, ../scss/_wordpress.scss */
+/* line 95, ../scss/_wordpress.scss */
 .entry-content .edit-link a:hover {
   color: #41a62a;
 }
 
 /* Assistive text */
-/* line 128, ../scss/_wordpress.scss */
+/* line 101, ../scss/_wordpress.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
 
-/* line 133, ../scss/_wordpress.scss */
+/* line 106, ../scss/_wordpress.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -7801,13 +7801,13 @@ html {
   /* Above WP toolbar */
 }
 
-/* line 154, ../scss/_wordpress.scss */
+/* line 127, ../scss/_wordpress.scss */
 .hide {
   display: none;
 }
 
 /* Genericons */
-/* line 169, ../scss/_wordpress.scss */
+/* line 142, ../scss/_wordpress.scss */
 .bypostauthor > article .fn:before,
 .comment-edit-link:before,
 .comment-reply-link:before,
@@ -7825,7 +7825,7 @@ html {
   vertical-align: text-bottom;
 }
 
-/* line 177, ../scss/_wordpress.scss */
+/* line 150, ../scss/_wordpress.scss */
 .menu-toggle {
   cursor: pointer;
   font-size: 0;
@@ -7839,14 +7839,14 @@ html {
   width: 48px;
 }
 
-/* line 190, ../scss/_wordpress.scss */
+/* line 163, ../scss/_wordpress.scss */
 .menu-toggle:before {
   color: #fff;
   content: "\f419";
   margin-top: 16px;
 }
 
-/* line 196, ../scss/_wordpress.scss */
+/* line 169, ../scss/_wordpress.scss */
 .bypostauthor > article .fn:before {
   content: "\f408";
   margin: 0 2px 0 -2px;
@@ -7854,60 +7854,60 @@ html {
   top: -1px;
 }
 
-/* line 203, ../scss/_wordpress.scss */
+/* line 176, ../scss/_wordpress.scss */
 .comment-edit-link:before {
   content: "\f411";
 }
 
-/* line 208, ../scss/_wordpress.scss */
+/* line 181, ../scss/_wordpress.scss */
 .comment-reply-link:before,
 .comment-reply-login:before {
   content: "\f412";
   margin-right: 2px;
 }
 
-/* line 213, ../scss/_wordpress.scss */
+/* line 186, ../scss/_wordpress.scss */
 .comment-reply-title small a:before {
   content: "\f405";
   font-size: 32px;
 }
 
-/* line 218, ../scss/_wordpress.scss */
+/* line 191, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .video.widget-title:before {
   content: "\f104";
 }
 
-/* line 222, ../scss/_wordpress.scss */
+/* line 195, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .audio.widget-title:before {
   content: "\f109";
 }
 
-/* line 226, ../scss/_wordpress.scss */
+/* line 199, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .image.widget-title:before {
   content: "\f473";
 }
 
-/* line 230, ../scss/_wordpress.scss */
+/* line 203, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .gallery.widget-title:before {
   content: "\f103";
 }
 
-/* line 234, ../scss/_wordpress.scss */
+/* line 207, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .aside.widget-title:before {
   content: "\f101";
 }
 
-/* line 238, ../scss/_wordpress.scss */
+/* line 211, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .quote.widget-title:before {
   content: "\f106";
 }
 
-/* line 242, ../scss/_wordpress.scss */
+/* line 215, ../scss/_wordpress.scss */
 .content-sidebar .widget_zdwpbs_ephemera .link.widget-title:before {
   content: "\f107";
 }
 
-/* line 246, ../scss/_wordpress.scss */
+/* line 219, ../scss/_wordpress.scss */
 .slider-direction-nav a:before {
   color: #fff;
   content: "\f430";
@@ -7915,52 +7915,52 @@ html {
   line-height: 46px;
 }
 
-/* line 253, ../scss/_wordpress.scss */
+/* line 226, ../scss/_wordpress.scss */
 .slider-direction-nav .slider-next:before {
   content: "\f429";
 }
 
-/* line 257, ../scss/_wordpress.scss */
+/* line 230, ../scss/_wordpress.scss */
 .site-content .format-video .post-format a:before {
   content: "\f104";
 }
 
-/* line 261, ../scss/_wordpress.scss */
+/* line 234, ../scss/_wordpress.scss */
 .site-content .format-audio .post-format a:before {
   content: "\f109";
 }
 
-/* line 265, ../scss/_wordpress.scss */
+/* line 238, ../scss/_wordpress.scss */
 .site-content .format-image .post-format a:before {
   content: "\f473";
 }
 
-/* line 269, ../scss/_wordpress.scss */
+/* line 242, ../scss/_wordpress.scss */
 .site-content .format-quote .post-format a:before {
   content: "\f106";
   margin-right: 2px;
 }
 
-/* line 274, ../scss/_wordpress.scss */
+/* line 247, ../scss/_wordpress.scss */
 .site-content .format-gallery .post-format a:before {
   content: "\f103";
   margin-right: 4px;
 }
 
-/* line 279, ../scss/_wordpress.scss */
+/* line 252, ../scss/_wordpress.scss */
 .site-content .format-aside .post-format a:before {
   content: "\f101";
   margin-right: 2px;
 }
 
-/* line 284, ../scss/_wordpress.scss */
+/* line 257, ../scss/_wordpress.scss */
 .site-content .format-link .post-format a:before {
   content: "\f107";
   position: relative;
   top: 1px;
 }
 
-/* line 290, ../scss/_wordpress.scss */
+/* line 263, ../scss/_wordpress.scss */
 .site-content .featured-post:before {
   content: "\f308";
   margin-right: 3px;
@@ -7968,7 +7968,7 @@ html {
   top: 1px;
 }
 
-/* line 298, ../scss/_wordpress.scss */
+/* line 271, ../scss/_wordpress.scss */
 .site-content .entry-date a:before,
 .attachment .site-content span.entry-date:before {
   content: "\f303";
@@ -7977,35 +7977,35 @@ html {
   top: 1px;
 }
 
-/* line 305, ../scss/_wordpress.scss */
+/* line 278, ../scss/_wordpress.scss */
 .site-content .byline a:before {
   content: "\f304";
 }
 
-/* line 309, ../scss/_wordpress.scss */
+/* line 282, ../scss/_wordpress.scss */
 .site-content .comments-link a:before {
   content: "\f300";
   margin-right: 2px;
 }
 
-/* line 315, ../scss/_wordpress.scss */
+/* line 288, ../scss/_wordpress.scss */
 .entry-content .edit-link a:before,
 .entry-meta .edit-link a:before {
   content: "\f411";
 }
 
-/* line 319, ../scss/_wordpress.scss */
+/* line 292, ../scss/_wordpress.scss */
 .site-content .full-size-link a:before {
   content: "\f402";
   margin-right: 1px;
 }
 
-/* line 324, ../scss/_wordpress.scss */
+/* line 297, ../scss/_wordpress.scss */
 .site-content .parent-post-link a:before {
   content: "\f301";
 }
 
-/* line 328, ../scss/_wordpress.scss */
+/* line 301, ../scss/_wordpress.scss */
 .site-description {
   display: none;
   font-size: 12px;
@@ -8013,7 +8013,7 @@ html {
   line-height: 1.5;
 }
 
-/* line 340, ../scss/_wordpress.scss */
+/* line 313, ../scss/_wordpress.scss */
 .full-size-link:before,
 .parent-post-link:before,
 .site-content span + .byline:before,
@@ -8023,7 +8023,7 @@ html {
   content: "";
 }
 
-/* line 353, ../scss/_wordpress.scss */
+/* line 326, ../scss/_wordpress.scss */
 .attachment span.entry-date:before,
 .entry-content .edit-link a:before,
 .entry-meta .edit-link a:before,
@@ -8042,9 +8042,8 @@ html {
 }
 
 @media only screen and (min-width: 992px) {
-  /* Primary Navigation */
   /* Genericons */
-  /* line 403, ../scss/_wordpress.scss */
+  /* line 344, ../scss/_wordpress.scss */
   .primary-navigation .menu-item-has-children > a:after,
   .primary-navigation .page_item_has_children > a:after {
     -webkit-font-smoothing: antialiased;
@@ -8057,7 +8056,7 @@ html {
     vertical-align: text-bottom;
   }
 
-  /* line 417, ../scss/_wordpress.scss */
+  /* line 358, ../scss/_wordpress.scss */
   .primary-navigation .menu-item-has-children li.menu-item-has-children > a:after,
   .primary-navigation .menu-item-has-children li.page_item_has_children > a:after,
   .primary-navigation .page_item_has_children li.menu-item-has-children > a:after,
@@ -8067,7 +8066,7 @@ html {
     top: 20px;
   }
 
-  /* line 423, ../scss/_wordpress.scss */
+  /* line 364, ../scss/_wordpress.scss */
   .secondary-navigation .menu-item-has-children > a:after {
     -webkit-font-smoothing: antialiased;
     content: "\f501";
@@ -8080,12 +8079,12 @@ html {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 439, ../scss/_wordpress.scss */
+  /* line 380, ../scss/_wordpress.scss */
   .site-description {
     display: block;
   }
 
-  /* line 444, ../scss/_wordpress.scss */
+  /* line 384, ../scss/_wordpress.scss */
   .site-description:empty {
     margin: 0;
   }

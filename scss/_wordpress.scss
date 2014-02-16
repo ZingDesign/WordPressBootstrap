@@ -1,30 +1,3 @@
-/* Primary Navigation */
-
-//.primary-navigation {
-//  -webkit-box-sizing: border-box;
-//  -moz-box-sizing:    border-box;
-//  box-sizing:         border-box;
-//  font-size: 14px;
-//  padding-top: 24px;
-//}
-//
-//.primary-navigation.toggled-on {
-//  padding: 72px 0 36px;
-//}
-//
-//.primary-navigation .nav-menu {
-//  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-//  display: none;
-//}
-//
-//.primary-navigation.toggled-on .nav-menu {
-//  display: block;
-//}
-//
-//.primary-navigation a {
-//  padding: 7px 0;
-//}
-
 /**
  * 6.4 Entry Content
  * -----------------------------------------------------------------------------
@@ -365,38 +338,6 @@
 
 @media #{$medium} {
 
-  /* Primary Navigation */
-
-//  .primary-navigation {
-//    -webkit-box-sizing: border-box;
-//    -moz-box-sizing:    border-box;
-//    box-sizing:         border-box;
-//    font-size: 14px;
-//    padding-top: 24px;
-//  }
-//
-//  .primary-navigation.toggled-on {
-//    padding: 72px 0 36px;
-//  }
-//
-//  .primary-navigation .nav-menu {
-//    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-//    display: none;
-//  }
-//
-//  .primary-navigation.toggled-on .nav-menu {
-//    display: block;
-//  }
-//
-//  .primary-navigation a {
-//    padding: 7px 0;
-//  }
-//
-//  .primary-navigation .menu-toggle {
-//    display: none;
-//    padding: 0;
-//  }
-
   /* Genericons */
 
   .primary-navigation .menu-item-has-children > a:after,
@@ -438,7 +379,6 @@
 
   .site-description {
     display: block;
-//    margin: -3px 0 21px;
   }
 
   .site-description:empty {
