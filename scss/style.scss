@@ -7,7 +7,7 @@ Description: This is a boilerplate theme for developers to use to build WordPres
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: bootstrap, boilerplate, centred, basic, sidebar
+Tags: bootstrap, boilerplate, centered, basic, sidebar
 Text Domain: zdwpbs
 
 */
@@ -16,10 +16,10 @@ Text Domain: zdwpbs
 
 // Compass requirements
 
-// All
-//@import "compass";
+// Load the whole Compass library (Easy, slower compilation)
+@import "compass";
 
-// Popular
+// Hand-picked - Example (Recommended)
 //@import "compass/css3/transition";
 //@import "compass/css3/box-shadow";
 //@import "compass/css3/border-radius";
@@ -31,30 +31,39 @@ Text Domain: zdwpbs
 
 // Bootstrap
 
-// Use ALL Bootstrap styles (Easy)
+// Use ALL Bootstrap styles (Easy, larger file size)
 
-@import '../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss';
+//@import '../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss';
 
-//Hand-pick which Bootstrap components to include (Recommended)
+// OR
 
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/variables";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/mixins";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/normalize";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/print";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/scaffolding";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/type";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/code";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/grid";
+// Hand-pick which Bootstrap components to include by uncommenting from the commented list below (Recommended, smaller file size)
+
+// Core variables and mixins
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/variables";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/mixins";
+
+// Reset
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/normalize";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/print";
+
+// Core CSS
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/scaffolding";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/type";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/code";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/grid";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/tables";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/forms";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/buttons";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/component-animations";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/forms";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/component-animations";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/glyphicons";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/dropdowns";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/dropdowns";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/button-groups";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/input-groups";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navs";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navbar";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navs";
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navbar";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/breadcrumbs";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/pagination";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/pager";
@@ -69,11 +78,15 @@ Text Domain: zdwpbs
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/panels";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/wells";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/modals";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/tooltip";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/popovers";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/carousel";
-//@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/utilities";
+
+// Utility classes
+@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/utilities";
 //@import "../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/responsive-utilities";
 
 
@@ -82,7 +95,7 @@ Text Domain: zdwpbs
 //@import '../foundation/bower_components/foundation/scss/normalize.scss';
 //@import '../foundation/bower_components/foundation/scss/foundation.scss';
 
-// Use WordPress' Twenty Fourteen theme
+// WordPress' Twenty Fourteen theme
 //@import 'twentyfourteen';
 
 // Our custom styles
