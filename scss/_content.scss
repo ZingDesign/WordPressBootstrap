@@ -8,7 +8,8 @@
 
 // grid
 
-#main-content {
+#main-content,
+#primary {
   @include make-sm-column(7);
   @include make-md-column(8);
   @include make-lg-column(9);

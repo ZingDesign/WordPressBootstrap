@@ -1,0 +1,42 @@
+/*! Custom UI styles */
+
+input[type="submit"] {
+  @extend .btn !optional;
+}
+
+
+//color
+//date
+//datetime
+//datetime-local
+//email
+//month
+//number
+//range
+//search
+//tel
+//time
+//url
+//week
+
+//$text_inputs: 'input[type="text"],
+//input[type="email"],
+//input[type="password"],
+//input[type="tel"],
+//input[type="datetime"],
+//input[type="number"],
+//input[type="search"],
+//input[type="url"]';
+
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="datetime"],
+input[type="number"],
+input[type="search"],
+input[type="url"] {
+  @extend .form-control !optional;
+}

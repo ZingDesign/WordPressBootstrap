@@ -356,8 +356,9 @@ th {
   }
 
   /* line 83, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret,
-  .dropup > .btn > .caret {
+  .btn > .caret, input[type="submit"] > .caret,
+  .dropup > .btn > .caret,
+  .dropup > input[type="submit"] > .caret {
     border-top-color: #000 !important;
   }
 
@@ -2438,7 +2439,15 @@ output {
 }
 
 /* line 114, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-.form-control {
+.form-control, textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="datetime"],
+input[type="number"],
+input[type="search"],
+input[type="url"] {
   display: block;
   width: 100%;
   height: 34px;
@@ -2456,34 +2465,90 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 /* line 915, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.form-control:focus {
+.form-control:focus, textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="datetime"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 57, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, textarea::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="datetime"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder {
   color: #999999;
   opacity: 1;
 }
 /* line 59, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, textarea:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="datetime"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder {
   color: #999999;
 }
 /* line 60, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, textarea::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="datetime"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder {
   color: #999999;
 }
 /* line 142, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled], textarea[disabled],
+input[disabled][type="text"],
+input[disabled][type="email"],
+input[disabled][type="password"],
+input[disabled][type="tel"],
+input[disabled][type="datetime"],
+input[disabled][type="number"],
+input[disabled][type="search"],
+input[disabled][type="url"], .form-control[readonly], textarea[readonly],
+input[readonly][type="text"],
+input[readonly][type="email"],
+input[readonly][type="password"],
+input[readonly][type="tel"],
+input[readonly][type="datetime"],
+input[readonly][type="number"],
+input[readonly][type="search"],
+input[readonly][type="url"], fieldset[disabled] .form-control, fieldset[disabled] textarea,
+fieldset[disabled] input[type="text"],
+fieldset[disabled] input[type="email"],
+fieldset[disabled] input[type="password"],
+fieldset[disabled] input[type="tel"],
+fieldset[disabled] input[type="datetime"],
+fieldset[disabled] input[type="number"],
+fieldset[disabled] input[type="search"],
+fieldset[disabled] input[type="url"] {
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
 }
 
 /* line 152, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-textarea.form-control {
+textarea.form-control, textarea {
   height: auto;
 }
 
@@ -2568,9 +2633,18 @@ input[type="checkbox"],
 }
 
 /* line 930, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.input-sm, .input-group-sm > .form-control,
+.input-sm, .input-group-sm > .form-control, .input-group-sm > textarea,
+.input-group-sm > input[type="text"],
+.input-group-sm > input[type="email"],
+.input-group-sm > input[type="password"],
+.input-group-sm > input[type="tel"],
+.input-group-sm > input[type="datetime"],
+.input-group-sm > input[type="number"],
+.input-group-sm > input[type="search"],
+.input-group-sm > input[type="url"],
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .input-group-btn > .btn,
+.input-group-sm > .input-group-btn > input[type="submit"] {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2587,7 +2661,7 @@ select.input-sm, .input-group-sm > select.form-control,
 }
 
 /* line 944, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-textarea.input-sm, .input-group-sm > textarea.form-control,
+textarea.input-sm, .input-group-sm > textarea,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 select[multiple].input-sm,
@@ -2598,9 +2672,18 @@ select[multiple].input-sm,
 }
 
 /* line 930, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.input-lg, .input-group-lg > .form-control,
+.input-lg, .input-group-lg > .form-control, .input-group-lg > textarea,
+.input-group-lg > input[type="text"],
+.input-group-lg > input[type="email"],
+.input-group-lg > input[type="password"],
+.input-group-lg > input[type="tel"],
+.input-group-lg > input[type="datetime"],
+.input-group-lg > input[type="number"],
+.input-group-lg > input[type="search"],
+.input-group-lg > input[type="url"],
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .input-group-btn > .btn,
+.input-group-lg > .input-group-btn > input[type="submit"] {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -2617,7 +2700,7 @@ select.input-lg, .input-group-lg > select.form-control,
 }
 
 /* line 944, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-textarea.input-lg, .input-group-lg > textarea.form-control,
+textarea.input-lg, .input-group-lg > textarea,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 select[multiple].input-lg,
@@ -2632,7 +2715,15 @@ select[multiple].input-lg,
   position: relative;
 }
 /* line 269, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-.has-feedback .form-control {
+.has-feedback .form-control, .has-feedback textarea,
+.has-feedback input[type="text"],
+.has-feedback input[type="email"],
+.has-feedback input[type="password"],
+.has-feedback input[type="tel"],
+.has-feedback input[type="datetime"],
+.has-feedback input[type="number"],
+.has-feedback input[type="search"],
+.has-feedback input[type="url"] {
   padding-right: 42.5px;
 }
 /* line 274, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
@@ -2657,13 +2748,29 @@ select[multiple].input-lg,
   color: #3c763d;
 }
 /* line 879, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-success .form-control {
+.has-success .form-control, .has-success textarea,
+.has-success input[type="text"],
+.has-success input[type="email"],
+.has-success input[type="password"],
+.has-success input[type="tel"],
+.has-success input[type="datetime"],
+.has-success input[type="number"],
+.has-success input[type="search"],
+.has-success input[type="url"] {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success textarea:focus,
+.has-success input[type="text"]:focus,
+.has-success input[type="email"]:focus,
+.has-success input[type="password"]:focus,
+.has-success input[type="tel"]:focus,
+.has-success input[type="datetime"]:focus,
+.has-success input[type="number"]:focus,
+.has-success input[type="search"]:focus,
+.has-success input[type="url"]:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -2689,13 +2796,29 @@ select[multiple].input-lg,
   color: #8a6d3b;
 }
 /* line 879, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-warning .form-control {
+.has-warning .form-control, .has-warning textarea,
+.has-warning input[type="text"],
+.has-warning input[type="email"],
+.has-warning input[type="password"],
+.has-warning input[type="tel"],
+.has-warning input[type="datetime"],
+.has-warning input[type="number"],
+.has-warning input[type="search"],
+.has-warning input[type="url"] {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning textarea:focus,
+.has-warning input[type="text"]:focus,
+.has-warning input[type="email"]:focus,
+.has-warning input[type="password"]:focus,
+.has-warning input[type="tel"]:focus,
+.has-warning input[type="datetime"]:focus,
+.has-warning input[type="number"]:focus,
+.has-warning input[type="search"]:focus,
+.has-warning input[type="url"]:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -2721,13 +2844,29 @@ select[multiple].input-lg,
   color: #a94442;
 }
 /* line 879, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-error .form-control {
+.has-error .form-control, .has-error textarea,
+.has-error input[type="text"],
+.has-error input[type="email"],
+.has-error input[type="password"],
+.has-error input[type="tel"],
+.has-error input[type="datetime"],
+.has-error input[type="number"],
+.has-error input[type="search"],
+.has-error input[type="url"] {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error textarea:focus,
+.has-error input[type="text"]:focus,
+.has-error input[type="email"]:focus,
+.has-error input[type="password"]:focus,
+.has-error input[type="tel"]:focus,
+.has-error input[type="datetime"]:focus,
+.has-error input[type="number"]:focus,
+.has-error input[type="search"]:focus,
+.has-error input[type="url"]:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -2764,13 +2903,45 @@ select[multiple].input-lg,
     vertical-align: middle;
   }
   /* line 345, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .form-control, .navbar-form .form-control {
+  .form-inline .form-control, .navbar-form .form-control, .form-inline textarea, .navbar-form textarea,
+  .form-inline input[type="text"],
+  .navbar-form input[type="text"],
+  .form-inline input[type="email"],
+  .navbar-form input[type="email"],
+  .form-inline input[type="password"],
+  .navbar-form input[type="password"],
+  .form-inline input[type="tel"],
+  .navbar-form input[type="tel"],
+  .form-inline input[type="datetime"],
+  .navbar-form input[type="datetime"],
+  .form-inline input[type="number"],
+  .navbar-form input[type="number"],
+  .form-inline input[type="search"],
+  .navbar-form input[type="search"],
+  .form-inline input[type="url"],
+  .navbar-form input[type="url"] {
     display: inline-block;
     width: auto;
     vertical-align: middle;
   }
   /* line 351, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .input-group > .form-control, .navbar-form .input-group > .form-control {
+  .form-inline .input-group > .form-control, .navbar-form .input-group > .form-control, .form-inline .input-group > textarea, .navbar-form .input-group > textarea,
+  .form-inline .input-group > input[type="text"],
+  .navbar-form .input-group > input[type="text"],
+  .form-inline .input-group > input[type="email"],
+  .navbar-form .input-group > input[type="email"],
+  .form-inline .input-group > input[type="password"],
+  .navbar-form .input-group > input[type="password"],
+  .form-inline .input-group > input[type="tel"],
+  .navbar-form .input-group > input[type="tel"],
+  .form-inline .input-group > input[type="datetime"],
+  .navbar-form .input-group > input[type="datetime"],
+  .form-inline .input-group > input[type="number"],
+  .navbar-form .input-group > input[type="number"],
+  .form-inline .input-group > input[type="search"],
+  .navbar-form .input-group > input[type="search"],
+  .form-inline .input-group > input[type="url"],
+  .navbar-form .input-group > input[type="url"] {
     width: 100%;
   }
   /* line 355, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
@@ -2847,7 +3018,7 @@ select[multiple].input-lg,
 }
 
 /* line 9, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn {
+.btn, input[type="submit"] {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2867,25 +3038,25 @@ select[multiple].input-lg,
   user-select: none;
 }
 /* line 25, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:focus, .btn:active:focus, .btn.active:focus {
+.btn:focus, input[type="submit"]:focus, .btn:active:focus, input[type="submit"]:active:focus, .btn.active:focus, input.active[type="submit"]:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 31, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:hover, .btn:focus {
+.btn:hover, input[type="submit"]:hover, .btn:focus, input[type="submit"]:focus {
   color: #333333;
   text-decoration: none;
 }
 /* line 37, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:active, .btn.active {
+.btn:active, input[type="submit"]:active, .btn.active, input.active[type="submit"] {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 45, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled, input.disabled[type="submit"], .btn[disabled], input[disabled][type="submit"], fieldset[disabled] .btn, fieldset[disabled] input[type="submit"] {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -3146,7 +3317,7 @@ select[multiple].input-lg,
 }
 
 /* line 124, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"] {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
@@ -3154,7 +3325,7 @@ select[multiple].input-lg,
 }
 
 /* line 128, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"] {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -3162,7 +3333,7 @@ select[multiple].input-lg,
 }
 
 /* line 132, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > input[type="submit"] {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4413,29 +4584,37 @@ input[type="button"].btn-block {
   vertical-align: middle;
 }
 /* line 11, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .btn-group > input[type="submit"],
+.btn-group-vertical > .btn,
+.btn-group-vertical > input[type="submit"] {
   position: relative;
   float: left;
 }
 /* line 18, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:hover, .btn-group > input[type="submit"]:hover, .btn-group > .btn:focus, .btn-group > input[type="submit"]:focus, .btn-group > .btn:active, .btn-group > input[type="submit"]:active, .btn-group > .btn.active, .btn-group > input.active[type="submit"],
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > input[type="submit"]:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > input[type="submit"]:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.btn-group-vertical > input[type="submit"]:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > input.active[type="submit"] {
   z-index: 2;
 }
 /* line 21, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:focus,
-.btn-group-vertical > .btn:focus {
+.btn-group > .btn:focus, .btn-group > input[type="submit"]:focus,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > input[type="submit"]:focus {
   outline: none;
 }
 
 /* line 33, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn,
+.btn-group .btn + .btn, .btn-group input[type="submit"] + .btn, .btn-group .btn + input[type="submit"], .btn-group input[type="submit"] + input[type="submit"],
 .btn-group .btn + .btn-group,
+.btn-group input[type="submit"] + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .btn-group + input[type="submit"],
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -4459,29 +4638,29 @@ input[type="button"].btn-block {
   float: left;
 }
 /* line 49, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn,
+.btn-toolbar > .btn, .btn-toolbar > input[type="submit"],
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 54, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 /* line 59, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .btn-group > input[type="submit"]:first-child {
   margin-left: 0;
 }
 /* line 61, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 67, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > input[type="submit"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -4493,19 +4672,19 @@ input[type="button"].btn-block {
 }
 
 /* line 75, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
   border-radius: 0;
 }
 
 /* line 80, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child > .btn:last-child,
+.btn-group > .btn-group:first-child > .btn:last-child, .btn-group > .btn-group:first-child > input[type="submit"]:last-child,
 .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 84, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child > .btn:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child, .btn-group > .btn-group:last-child > input[type="submit"]:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4517,13 +4696,13 @@ input[type="button"].btn-block {
 }
 
 /* line 108, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > input[type="submit"] + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 112, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > input[type="submit"] + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -4540,25 +4719,26 @@ input[type="button"].btn-block {
 }
 
 /* line 130, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn .caret {
+.btn .caret, input[type="submit"] .caret {
   margin-left: 0;
 }
 
 /* line 134, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > input[type="submit"] .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 139, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > input[type="submit"] .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 150, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > input[type="submit"],
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn,
+.btn-group-vertical > .btn-group > input[type="submit"] {
   display: block;
   float: none;
   width: 100%;
@@ -4574,49 +4754,51 @@ input[type="button"].btn-block {
   clear: both;
 }
 /* line 160, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > input[type="submit"] {
   float: none;
 }
 /* line 168, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > input[type="submit"] + .btn, .btn-group-vertical > .btn + input[type="submit"], .btn-group-vertical > input[type="submit"] + input[type="submit"],
 .btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > input[type="submit"] + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + input[type="submit"],
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
 /* line 175, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 178, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > input[type="submit"]:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 182, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > input[type="submit"]:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 187, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
   border-radius: 0;
 }
 
 /* line 192, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 196, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4629,20 +4811,21 @@ input[type="button"].btn-block {
   border-collapse: separate;
 }
 /* line 211, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn,
+.btn-group-justified > .btn, .btn-group-justified > input[type="submit"],
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 216, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group input[type="submit"] {
   width: 100%;
 }
 
 /* line 224, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle="buttons"] > .btn > input[type="radio"], [data-toggle="buttons"] > input[type="submit"] > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"],
+[data-toggle="buttons"] > input[type="submit"] > input[type="checkbox"] {
   display: none;
 }
 
@@ -4659,7 +4842,15 @@ input[type="button"].btn-block {
   padding-right: 0;
 }
 /* line 19, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control {
+.input-group .form-control, .input-group textarea,
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="datetime"],
+.input-group input[type="number"],
+.input-group input[type="search"],
+.input-group input[type="url"] {
   position: relative;
   z-index: 2;
   float: left;
@@ -4670,13 +4861,31 @@ input[type="button"].btn-block {
 /* line 52, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group textarea,
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="datetime"],
+.input-group input[type="number"],
+.input-group input[type="search"],
+.input-group input[type="url"] {
   display: table-cell;
 }
 /* line 55, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group textarea:not(:first-child):not(:last-child),
+.input-group input[type="text"]:not(:first-child):not(:last-child),
+.input-group input[type="email"]:not(:first-child):not(:last-child),
+.input-group input[type="password"]:not(:first-child):not(:last-child),
+.input-group input[type="tel"]:not(:first-child):not(:last-child),
+.input-group input[type="datetime"]:not(:first-child):not(:last-child),
+.input-group input[type="number"]:not(:first-child):not(:last-child),
+.input-group input[type="search"]:not(:first-child):not(:last-child),
+.input-group input[type="url"]:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -4723,13 +4932,25 @@ input[type="button"].btn-block {
 }
 
 /* line 106, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group textarea:first-child,
+.input-group input[type="text"]:first-child,
+.input-group input[type="email"]:first-child,
+.input-group input[type="password"]:first-child,
+.input-group input[type="tel"]:first-child,
+.input-group input[type="datetime"]:first-child,
+.input-group input[type="number"]:first-child,
+.input-group input[type="search"]:first-child,
+.input-group input[type="url"]:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+.input-group-btn:first-child > input[type="submit"],
 .input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .btn-group > input[type="submit"],
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.input-group-btn:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.input-group-btn:last-child > .btn-group:not(:last-child) > input[type="submit"] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4740,13 +4961,25 @@ input[type="button"].btn-block {
 }
 
 /* line 118, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group textarea:last-child,
+.input-group input[type="text"]:last-child,
+.input-group input[type="email"]:last-child,
+.input-group input[type="password"]:last-child,
+.input-group input[type="tel"]:last-child,
+.input-group input[type="datetime"]:last-child,
+.input-group input[type="number"]:last-child,
+.input-group input[type="search"]:last-child,
+.input-group input[type="url"]:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+.input-group-btn:last-child > input[type="submit"],
 .input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .btn-group > input[type="submit"],
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.input-group-btn:first-child > input[type="submit"]:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.input-group-btn:first-child > .btn-group:not(:first-child) > input[type="submit"] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4763,24 +4996,24 @@ input[type="button"].btn-block {
   white-space: nowrap;
 }
 /* line 136, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn {
+.input-group-btn > .btn, .input-group-btn > input[type="submit"] {
   position: relative;
 }
 /* line 138, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn {
+.input-group-btn > .btn + .btn, .input-group-btn > input[type="submit"] + .btn, .input-group-btn > .btn + input[type="submit"], .input-group-btn > input[type="submit"] + input[type="submit"] {
   margin-left: -1px;
 }
 /* line 144, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
+.input-group-btn > .btn:hover, .input-group-btn > input[type="submit"]:hover, .input-group-btn > .btn:focus, .input-group-btn > input[type="submit"]:focus, .input-group-btn > .btn:active, .input-group-btn > input[type="submit"]:active {
   z-index: 2;
 }
 /* line 152, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > input[type="submit"],
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 158, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > input[type="submit"],
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5304,12 +5537,12 @@ input[type="button"].btn-block {
   margin-bottom: 8px;
 }
 /* line 351, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > input.navbar-btn[type="submit"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 354, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > input.navbar-btn[type="submit"] {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -5727,7 +5960,7 @@ input[type="button"].btn-block {
   display: none;
 }
 /* line 33, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
-.btn .label {
+.btn .label, input[type="submit"] .label {
   position: relative;
   top: -1px;
 }
@@ -5806,12 +6039,12 @@ input[type="button"].btn-block {
   display: none;
 }
 /* line 27, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss */
-.btn .badge {
+.btn .badge, input[type="submit"] .badge {
   position: relative;
   top: -1px;
 }
 /* line 31, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -6877,12 +7110,12 @@ button.close {
   clear: both;
 }
 /* line 108, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn + .btn {
+.modal-footer .btn + .btn, .modal-footer input[type="submit"] + .btn, .modal-footer .btn + input[type="submit"], .modal-footer input[type="submit"] + input[type="submit"] {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 113, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group input[type="submit"] + .btn, .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group input[type="submit"] + input[type="submit"] {
   margin-left: -1px;
 }
 /* line 117, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
@@ -7363,7 +7596,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 198, ../bootstrap/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_carousel.scss */
-.carousel-caption .btn {
+.carousel-caption .btn, .carousel-caption input[type="submit"] {
   text-shadow: none;
 }
 
@@ -7660,6 +7893,11 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* line 104, ../scss/_base.scss */
+code {
+  white-space: normal;
 }
 
 /**
@@ -8091,10 +8329,12 @@ html {
 }
 /*! Custom typography styles */
 /*! Custom navigation styles */
+/*! Custom UI styles */
 /*! Custom header styles */
 /*! Custom content styles */
-/* line 11, ../scss/_content.scss */
-#main-content {
+/* line 12, ../scss/_content.scss */
+#main-content,
+#primary {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8109,28 +8349,31 @@ html {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 11, ../scss/_content.scss */
-  #main-content {
+  /* line 12, ../scss/_content.scss */
+  #main-content,
+  #primary {
     float: left;
     width: 58.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 11, ../scss/_content.scss */
-  #main-content {
+  /* line 12, ../scss/_content.scss */
+  #main-content,
+  #primary {
     float: left;
     width: 66.66667%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 11, ../scss/_content.scss */
-  #main-content {
+  /* line 12, ../scss/_content.scss */
+  #main-content,
+  #primary {
     float: left;
     width: 75%;
   }
 }
 
-/* line 17, ../scss/_content.scss */
+/* line 18, ../scss/_content.scss */
 #secondary {
   position: relative;
   min-height: 1px;
@@ -8146,21 +8389,21 @@ html {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 17, ../scss/_content.scss */
+  /* line 18, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 992px) {
-  /* line 17, ../scss/_content.scss */
+  /* line 18, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 17, ../scss/_content.scss */
+  /* line 18, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 25%;
