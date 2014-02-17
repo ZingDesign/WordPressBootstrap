@@ -5,6 +5,6 @@
 
 (function($){
 
-    console.log('Woohoo! It\'s working!');
+    console.log('Huzzah! It\'s working!');
 
 })(jQuery);

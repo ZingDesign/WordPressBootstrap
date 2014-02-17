@@ -1,9 +1,11 @@
 /*!
- * Zing Design WordPress Bootstrap v0.1.0 ()
+ * Zing Design WordPress Bootstrap v0.2.0 ()
  * Copyright 2014 Zing Design
  */
 
 if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }
+
+console.log = function() {}
 
 /* ========================================================================
  * Bootstrap: affix.js v3.1.1
@@ -1956,6 +1958,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 (function($){
 
-    console.log('Woohoo! It\'s working!');
+    console.log('Hazoo! It\'s working!');
+
+    alert('hello!!??');
 
 })(jQuery);

@@ -4633,11 +4633,11 @@ code {
   }
 }
 
-/* line 4, ../scss/_sidebar.scss */
+/* line 5, ../scss/_sidebar.scss */
 #primary-sidebar .search-form label {
   width: 70%;
 }
-/* line 7, ../scss/_sidebar.scss */
+/* line 8, ../scss/_sidebar.scss */
 #primary-sidebar .search-form .search-submit {
   float: right;
 }

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         banner: '/*!\n' +
-            ' * Zing Design WordPress Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Zing Design WordPress Bootstrap<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' */\n\n',
         jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
@@ -19,14 +19,14 @@ module.exports = function(grunt) {
         jshint: {
             options: {
                 jshintrc: 'js/.jshintrc'
-            },
-            gruntfile: {
+            }
+            ,gruntfile: {
                 src: 'Gruntfile.js'
-            },
-            bootstrap: {
+            }
+            ,bootstrap: {
                 src: [bootstrapScriptPath + '/*.js']
-            },
-            custom: {
+            }
+            ,custom: {
                 src: 'js/custom.js'
             }
         },
@@ -35,8 +35,8 @@ module.exports = function(grunt) {
             options: {
                 banner: '<%= banner %><%= jqueryCheck %>',
                 stripBanners: false
-            },
-            bootstrap: {
+            }
+            ,bootstrap: {
                 src: [
                     //Comment unused scripts out here
                     bootstrapScriptPath + '/affix.js',
@@ -60,8 +60,8 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
+            }
+            ,build: {
                 src: 'src/js/<%= pkg.name %>.js',
                 dest: 'dist/js/<%= pkg.name %>.min.js'
             }
@@ -92,8 +92,8 @@ module.exports = function(grunt) {
             compassWatch: {
                 files: ['scss/*.scss'],
                 tasks: ['compass']
-            },
-            jsWatch: {
+            }
+            ,jsWatch: {
                 files: ['js/custom.js'],
                 tasks: ['jshint:custom', 'concat', 'uglify']
             }
