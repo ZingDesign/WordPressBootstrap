@@ -1,3 +1,11 @@
-#secondary {
-
+//Make the sidebar search form look presentable
+#primary-sidebar {
+  .search-form {
+    label {
+      width: 70%;
+    }
+    .search-submit {
+      float: right;
+    }
+  }
 }
