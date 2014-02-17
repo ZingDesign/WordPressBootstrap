@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
     "use strict";
+    
+    var bootstrapScriptPath = 'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -21,9 +23,9 @@ module.exports = function(grunt) {
             gruntfile: {
                 src: 'Gruntfile.js'
             },
-//            bootstrap: {
-//                src: ['js/bootstrap/*.js']
-//            },
+            bootstrap: {
+                src: [bootstrapScriptPath + '/*.js']
+            },
             custom: {
                 src: 'js/custom.js'
             }
@@ -37,18 +39,18 @@ module.exports = function(grunt) {
             bootstrap: {
                 src: [
                     //Comment unused scripts out here
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/carousel.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
-                    'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js',
+                    bootstrapScriptPath + '/affix.js',
+                    bootstrapScriptPath + '/alert.js',
+                    bootstrapScriptPath + '/button.js',
+                    bootstrapScriptPath + '/carousel.js',
+                    bootstrapScriptPath + '/collapse.js',
+                    bootstrapScriptPath + '/dropdown.js',
+                    bootstrapScriptPath + '/tab.js',
+                    bootstrapScriptPath + '/transition.js',
+                    bootstrapScriptPath + '/scrollspy.js',
+                    bootstrapScriptPath + '/modal.js',
+                    bootstrapScriptPath + '/tooltip.js',
+                    bootstrapScriptPath + '/popover.js',
                     'js/custom.js'
                 ],
                 dest: 'src/js/<%= pkg.name %>.js'
@@ -93,7 +95,7 @@ module.exports = function(grunt) {
             },
             jsWatch: {
                 files: ['js/custom.js'],
-                tasks: ['jshint', 'concat', 'uglify']
+                tasks: ['jshint:custom', 'concat', 'uglify']
             }
             ,copyWatch: {
                 files: ['css/style.css'],
@@ -111,9 +113,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['clean', 'jshint', 'concat', 'uglify', 'compass', 'copy']);
-
-    grunt.registerTask('deploy', ['compass', 'copy']);
-
-//    grunt.registerTask('watch', ['watch']);
 
 };

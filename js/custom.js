@@ -1,10 +1,10 @@
 /**
  * Created by Zing Design
- * Custom scripts go in here!
+ * Custom script goes in here!
  */
 
 (function($){
 
-    console.log('Huzzah! It\'s working!');
+    console.log('Woohoo! It\'s working!');
 
 })(jQuery);
