@@ -1,15 +1,10 @@
 /*! Custom content styles */
 
-#main {
-//  @extend .container;
-//  @include container-fixed();
-//  @include make-row();
-}
+// Grid
 
-// grid
-
-#main-content,
-#primary {
+#primary.content-area,
+#main-content
+{
   @include make-sm-column(7);
   @include make-md-column(8);
   @include make-lg-column(9);
@@ -19,4 +14,9 @@
   @include make-sm-column(5);
   @include make-md-column(4);
   @include make-lg-column(3);
+}
+
+// Fix WordPress
+#main-content > #primary.content-area {
+  @include remove-column();
 }

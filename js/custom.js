@@ -4,7 +4,5 @@
  */
 
 (function($){
-
     console.log('Huzzah! It\'s working!');
-
 })(jQuery);

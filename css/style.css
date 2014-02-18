@@ -4060,13 +4060,13 @@ html {
   font-size: 62.5%;
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 63, ../scss/_base.scss */
 .mobile-friendly {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 62, ../scss/_base.scss */
+/* line 68, ../scss/_base.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -4074,7 +4074,7 @@ html {
   *text-indent: -9999px;
 }
 
-/* line 69, ../scss/_base.scss */
+/* line 75, ../scss/_base.scss */
 .ir:before {
   content: "";
   display: block;
@@ -4083,7 +4083,7 @@ html {
 }
 
 /* Flex Video */
-/* line 77, ../scss/_base.scss */
+/* line 83, ../scss/_base.scss */
 .flex-video {
   position: relative;
   padding-top: 1.5625em;
@@ -4092,15 +4092,15 @@ html {
   margin-bottom: 1em;
   overflow: hidden;
 }
-/* line 85, ../scss/_base.scss */
+/* line 91, ../scss/_base.scss */
 .flex-video.widescreen {
   padding-bottom: 57.25%;
 }
-/* line 89, ../scss/_base.scss */
+/* line 95, ../scss/_base.scss */
 .flex-video.vimeo {
   padding-top: 0;
 }
-/* line 93, ../scss/_base.scss */
+/* line 99, ../scss/_base.scss */
 .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
   position: absolute;
   top: 0;
@@ -4109,7 +4109,7 @@ html {
   height: 100%;
 }
 
-/* line 104, ../scss/_base.scss */
+/* line 110, ../scss/_base.scss */
 code {
   white-space: normal;
 }
@@ -4560,9 +4560,9 @@ code {
 }
 
 /*! Custom content styles */
-/* line 12, ../scss/_content.scss */
-#main-content,
-#primary {
+/* line 7, ../scss/_content.scss */
+#primary.content-area,
+#main-content {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -4577,31 +4577,31 @@ code {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 12, ../scss/_content.scss */
-  #main-content,
-  #primary {
+  /* line 7, ../scss/_content.scss */
+  #primary.content-area,
+  #main-content {
     float: left;
     width: 58.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 12, ../scss/_content.scss */
-  #main-content,
-  #primary {
+  /* line 7, ../scss/_content.scss */
+  #primary.content-area,
+  #main-content {
     float: left;
     width: 66.66667%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 12, ../scss/_content.scss */
-  #main-content,
-  #primary {
+  /* line 7, ../scss/_content.scss */
+  #primary.content-area,
+  #main-content {
     float: left;
     width: 75%;
   }
 }
 
-/* line 18, ../scss/_content.scss */
+/* line 13, ../scss/_content.scss */
 #secondary {
   position: relative;
   min-height: 1px;
@@ -4617,25 +4617,32 @@ code {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 18, ../scss/_content.scss */
+  /* line 13, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 992px) {
-  /* line 18, ../scss/_content.scss */
+  /* line 13, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 18, ../scss/_content.scss */
+  /* line 13, ../scss/_content.scss */
   #secondary {
     float: left;
     width: 25%;
   }
+}
+
+/* line 20, ../scss/_content.scss */
+#main-content > #primary.content-area {
+  float: none;
+  width: auto;
+  padding: 0;
 }
 
 /* line 5, ../scss/_sidebar.scss */

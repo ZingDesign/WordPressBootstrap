@@ -51,6 +51,12 @@ html {
   line-height: $line-height;
 }
 
+@mixin remove-column() {
+  float: none;
+  width: auto;
+  padding: 0;
+}
+
 // Helper classes
 
 // Mobile-friendly transition fix

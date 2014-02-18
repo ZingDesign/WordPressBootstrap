@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-<div id="main-content" class="main-content">
+<div id="main-content" class="main-content col-sm-7 col-md-8 col-lg-9">
 
 <?php
 	if ( is_front_page() && zdwpbs_has_featured_posts() ) {
