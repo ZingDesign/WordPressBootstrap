@@ -1,6 +1,11 @@
 //Make the sidebar search form look presentable by default
 
 #primary-sidebar {
+
+  h1 {
+    @include font(24);
+  }
+
   .search-form {
     label {
       width: 70%;

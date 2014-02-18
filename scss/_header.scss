@@ -1,14 +1,7 @@
 /*! Custom header styles */
 
-//#masthead {
-//  @extend .navbar;
-//
-//  h1 {
-//    @extend .navbar-header;
-//  }
-//
-//  .nav-menu {
-//    @extend .nav;
-//    @extend .navbar-nav;
-//  }
-//}
+#masthead {
+  .site-title {
+    margin: 4px 0 0 0;
+  }
+}

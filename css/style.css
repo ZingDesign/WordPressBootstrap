@@ -4554,6 +4554,11 @@ code {
 /*! Custom navigation styles */
 /*! Custom UI styles */
 /*! Custom header styles */
+/* line 4, ../scss/_header.scss */
+#masthead .site-title {
+  margin: 4px 0 0 0;
+}
+
 /*! Custom content styles */
 /* line 12, ../scss/_content.scss */
 #main-content,
@@ -4634,10 +4639,18 @@ code {
 }
 
 /* line 5, ../scss/_sidebar.scss */
+#primary-sidebar h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: black;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* line 10, ../scss/_sidebar.scss */
 #primary-sidebar .search-form label {
   width: 70%;
 }
-/* line 8, ../scss/_sidebar.scss */
+/* line 13, ../scss/_sidebar.scss */
 #primary-sidebar .search-form .search-submit {
   float: right;
 }
