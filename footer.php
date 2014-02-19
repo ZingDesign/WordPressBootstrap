@@ -21,7 +21,7 @@
 
                 <div class="site-info">
                     <?php do_action( 'zdwpbs_credits' ); ?>
-                    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'zdwpbs' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'zdwpbs' ), 'WordPress' ); ?></a>
+                    <a href="<?php echo esc_url( __( 'http://zingdesign.com/', 'zdwpbs' ) ); ?>" target="_blank"><?php printf( __( 'Boilerplate theme by %s', 'zdwpbs' ), 'Zing Design' ); ?></a>
                 </div><!-- .site-info -->
             </div><!-- .container -->
 

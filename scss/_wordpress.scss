@@ -340,9 +340,10 @@
   vertical-align: text-bottom;
 }
 
+// Comments
 
-@media #{$small} {
-
+.comment-list {
+  list-style-type: none;
 }
 
 @media #{$medium} {

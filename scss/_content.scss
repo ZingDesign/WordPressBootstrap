@@ -1,6 +1,6 @@
 /*! Custom content styles */
 
-// Grid
+// Semantic grid styles for a simple two-column layout
 
 #primary.content-area,
 #main-content
@@ -16,7 +16,23 @@
   @include make-lg-column(3);
 }
 
-// Fix WordPress
+// Remove column styles if primary container is inside main-content
+
 #main-content > #primary.content-area {
   @include remove-column();
+}
+
+// Default styles
+
+#main {
+  margin-bottom: emCalc(20px);
+}
+
+.page-title,
+.archive-title {
+  @include font(30);
+}
+
+.entry-title {
+  @include font(24);
 }

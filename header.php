@@ -40,8 +40,13 @@
 	</div>
 	<?php endif; ?>
 
-	<?php get_template_part('partials/header', 'navbar'); ?>
+	<?php get_template_part('inc/header', 'navbar'); ?>
 
 	<div id="main" class="site-main">
+        <?php
+        // Center content with the Bootstrap container
+        // Remove the container if you don't want centered content
+        ?>
         <div class="container">
             <div class="row">
+                <?php // Note: these divs are closed in footer.php ?>

@@ -1,10 +1,6 @@
 // Colour palette
 
 
-// Typography
-
-
-
 // Bootstrap Media queries
 
 $small: "only screen and (min-width: 768px)";
@@ -36,9 +32,7 @@ $em-base: 14px !default;
 // Mixins
 
 // rem font sizing
-html {
-  font-size: 62.5%;
-}
+
 @mixin font-size($px) {
   font-size: $px * 1px;
   font-size: $px * 0.1rem;
@@ -79,7 +73,7 @@ html {
   height: 150%;
 }
 
-/* Flex Video */
+/* Flex Video - from Foundation */
 .flex-video {
   position: relative;
   padding-top: 1.5625em;
