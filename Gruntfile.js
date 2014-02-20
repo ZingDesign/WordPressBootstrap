@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     "use strict";
     
-    var bootstrapScriptPath = 'bootstrap/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap';
+    var bootstrapScriptPath = 'app/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
