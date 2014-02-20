@@ -4,6 +4,7 @@
 #masthead {
   .site-title {
     margin: 4px 0 0 0;
+    @include font(36);
 
     a {
       text-decoration: none;

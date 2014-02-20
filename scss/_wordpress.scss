@@ -70,8 +70,7 @@
 
 .entry-content table,
 .comment-content table {
-  font-size: 14px;
-  line-height: 1.2857142857;
+  @include font(14);
   margin-bottom: 24px;
 }
 
@@ -90,9 +89,7 @@
 .entry-content .edit-link {
   clear: both;
   display: block;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.3333333333;
+  @include font(12);
   text-transform: uppercase;
 }
 
@@ -309,9 +306,7 @@
 
 .site-description {
   display: none;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
+  @include font(12);
 }
 
 .full-size-link:before,

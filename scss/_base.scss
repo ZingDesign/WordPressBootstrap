@@ -22,27 +22,17 @@ only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx)";
 
-// Functions
-
-$em-base: 14px !default;
-@function emCalc($pxWidth) {
-  @return $pxWidth / $em-base * 1em;
-}
-
 // Mixins
 
-// rem font sizing
+// Font helper
 
-@mixin font-size($px) {
-  font-size: $px * 1px;
-  font-size: $px * 0.1rem;
-}
+$line-height-base: 26;
 
-@mixin font($px, $color: #000, $weight:400, $line-height:1.5) {
-  @include font-size($px);
+@mixin font($px-value, $color: #000, $weight:400, $line-height:1.5) {
+  @include rem(font-size, $px-value);
   color: $color;
   font-weight: $weight;
-  line-height: $line-height;
+  line-height: max( 1, ($line-height-base / $px-value) );
 }
 
 @mixin remove-column() {
