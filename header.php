@@ -28,6 +28,11 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+
+    <?php //Add Respond.js for old IE browsers ?>
+    <!--[if lt IE 9]>
+    <script src="<?php get_template_directory_uri() ?>/app/bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
